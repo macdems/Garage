@@ -2355,29 +2355,273 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Relay:Relay_SPST-NC"
+		(symbol "NPN_1"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q1"
+				(at 5.08 1.2701 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "2N5551"
+				(at 5.08 -1.2699 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 63.5 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
+				(at 63.5 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "NPN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Type" "GUMMELPOON"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=C 2=B 3=E"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "simulation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "NPN_1_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -1.27) (xy 2.794 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -1.27) (xy 2.794 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NPN_1_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_emitter line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Relay:Relay_SPST-NO"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "K?"
-				(at 11.43 1.2701 0)
+				(at 15.24 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "Relay_SPST-NC"
-				(at 11.43 -1.2699 0)
+			(property "Value" "Relay_SPST-NO"
+				(at 12.7 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "Relay_THT:Relay_SPST_Panasonic_JW1_FormA"
+			(property "Footprint" ""
 				(at 11.43 -1.27 0)
 				(effects
 					(font
@@ -2396,7 +2640,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Relay SPST, normally closed, EN50005"
+			(property "Description" "Relay SPST, normally open, EN50005"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2405,7 +2649,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "1P1T 1-Form-B single pole throw NC"
+			(property "ki_keywords" "1P1T 1-Form-A single pole throw NO"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2423,7 +2667,32 @@
 					(hide yes)
 				)
 			)
-			(symbol "Relay_SPST-NC_0_1"
+			(symbol "Relay_SPST-NO_0_0"
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 2.54) (xy 6.985 3.175) (xy 7.62 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Relay_SPST-NO_0_1"
+				(rectangle
+					(start -10.16 5.08)
+					(end 10.16 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(rectangle
 					(start -8.255 1.905)
 					(end -1.905 -1.905)
@@ -2521,18 +2790,6 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 5.08) (xy 2.54 2.54) (xy 3.175 3.175) (xy 2.54 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
 						(xy 3.175 0) (xy 3.81 0)
 					)
 					(stroke
@@ -2568,38 +2825,9 @@
 					)
 				)
 			)
-			(symbol "Relay_SPST-NC_1_1"
-				(rectangle
-					(start -10.16 5.08)
-					(end 10.16 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
+			(symbol "Relay_SPST-NO_1_1"
 				(pin passive line
 					(at -5.08 7.62 270)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 90)
 					(length 2.54)
 					(name "~"
 						(effects
@@ -2617,7 +2845,25 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 7.62 270)
+					(at -5.08 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 90)
 					(length 2.54)
 					(name "~"
 						(effects
@@ -2635,7 +2881,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -7.62 90)
+					(at 7.62 7.62 270)
 					(length 2.54)
 					(name "~"
 						(effects
@@ -2897,23 +3143,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q"
-				(at -2.54 7.62 0)
+			(property "Reference" "Q2"
+				(at 5.08 1.2701 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "NPN"
-				(at -2.54 5.08 0)
+			(property "Value" "2N5551"
+				(at 5.08 -1.2699 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
 				(at 63.5 0 0)
 				(effects
 					(font
@@ -3102,7 +3350,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3120,7 +3368,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4624,16 +4872,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 72.39) (xy 182.88 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81d31d4d-140f-497c-800f-133f5386c67a")
-	)
-	(wire
-		(pts
 			(xy 172.72 152.4) (xy 184.15 152.4)
 		)
 		(stroke
@@ -4794,16 +5032,6 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 72.39) (xy 151.13 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be0895ed-2f59-4a0b-b748-d7ea583ae5d0")
-	)
-	(wire
-		(pts
 			(xy 184.15 132.08) (xy 186.69 132.08)
 		)
 		(stroke
@@ -4944,6 +5172,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 74.93) (xy 151.13 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e040e326-22c6-486e-9ad6-4cb38709ca04")
+	)
+	(wire
+		(pts
 			(xy 196.85 132.08) (xy 196.85 138.43)
 		)
 		(stroke
@@ -4991,6 +5229,16 @@
 			(type default)
 		)
 		(uuid "e928393a-9822-437a-849b-0d3624b83997")
+	)
+	(wire
+		(pts
+			(xy 182.88 74.93) (xy 182.88 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed1e1111-61cf-411e-b843-79d514054b88")
 	)
 	(wire
 		(pts
@@ -5203,6 +5451,81 @@
 			(project "Garaż"
 				(path "/8f3f2cb0-c7c7-4116-9663-55f4dfa53e17"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Relay:Relay_SPST-NO")
+		(at 143.51 69.85 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "046d7920-0f54-446d-98e9-3f15e538fbba")
+		(property "Reference" "K1"
+			(at 143.51 54.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Relay_SPST-NO"
+			(at 143.51 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_SPST_Panasonic_JW1_FormA"
+			(at 142.24 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Relay SPST, normally open, EN50005"
+			(at 143.51 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "bfa9c118-91d3-4aac-852b-f355c400c88b")
+		)
+		(pin "1"
+			(uuid "6e4c113f-d75d-4e61-aa76-fed8643c297c")
+		)
+		(pin "8"
+			(uuid "b8278da3-4fd2-4d07-bcd8-f022e40ab5cb")
+		)
+		(pin "6"
+			(uuid "99257301-1acf-48bc-a990-473053cd2cf0")
+		)
+		(instances
+			(project ""
+				(path "/8f3f2cb0-c7c7-4116-9663-55f4dfa53e17"
+					(reference "K1")
 					(unit 1)
 				)
 			)
@@ -5447,7 +5770,7 @@
 				)
 			)
 		)
-		(property "Value" "6k8"
+		(property "Value" "10k"
 			(at 146.05 125.73 90)
 			(effects
 				(font
@@ -5651,7 +5974,7 @@
 				)
 			)
 		)
-		(property "Value" "6k8"
+		(property "Value" "10k"
 			(at 146.05 148.59 90)
 			(effects
 				(font
@@ -5766,80 +6089,6 @@
 			(project "Garaż"
 				(path "/8f3f2cb0-c7c7-4116-9663-55f4dfa53e17"
 					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Relay:Relay_SPST-NC")
-		(at 175.26 67.31 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "38f617d9-6bc4-455f-8809-d656a1be5408")
-		(property "Reference" "K2"
-			(at 175.26 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Relay_SPST-NC"
-			(at 175.26 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Relay_THT:Relay_SPST_Panasonic_JW1_FormA"
-			(at 176.53 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 175.26 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Relay SPST, normally closed, EN50005"
-			(at 175.26 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "6"
-			(uuid "8d272175-7670-442e-8cf6-716c0e8a5bdf")
-		)
-		(pin "4"
-			(uuid "30961918-38cd-493a-a7a2-70d28822fbf4")
-		)
-		(pin "8"
-			(uuid "ea44d402-b801-4691-8932-1c48c76db6d1")
-		)
-		(pin "1"
-			(uuid "b43e06fc-8b70-452a-81bf-0eba0e84b819")
-		)
-		(instances
-			(project "Garaż"
-				(path "/8f3f2cb0-c7c7-4116-9663-55f4dfa53e17"
-					(reference "K2")
 					(unit 1)
 				)
 			)
@@ -6159,7 +6408,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "51k"
+		(property "Value" "68k"
 			(at 154.94 133.3501 0)
 			(effects
 				(font
@@ -6311,6 +6560,7 @@
 		)
 	)
 	(symbol
+		(lib_name "NPN_1")
 		(lib_id "Simulation_SPICE:NPN")
 		(at 153.67 105.41 0)
 		(mirror y)
@@ -7838,7 +8088,7 @@
 				)
 			)
 		)
-		(property "Value" "51k"
+		(property "Value" "68k"
 			(at 168.91 148.59 90)
 			(effects
 				(font
@@ -7950,80 +8200,6 @@
 			(project "Garaż"
 				(path "/8f3f2cb0-c7c7-4116-9663-55f4dfa53e17"
 					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Relay:Relay_SPST-NC")
-		(at 143.51 67.31 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c3fac455-4514-46d7-a810-8e641e14ed33")
-		(property "Reference" "K1"
-			(at 143.51 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Relay_SPST-NC"
-			(at 143.51 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Relay_THT:Relay_SPST_Panasonic_JW1_FormA"
-			(at 144.78 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 143.51 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Relay SPST, normally closed, EN50005"
-			(at 143.51 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "6"
-			(uuid "41d33767-a44a-4a10-9aa3-80bbee70d498")
-		)
-		(pin "4"
-			(uuid "f2332197-3f51-461f-917c-f898da4355bc")
-		)
-		(pin "8"
-			(uuid "6e55cd66-a129-4d48-95b8-8bdb93bae2e5")
-		)
-		(pin "1"
-			(uuid "a7e09103-1163-4b20-9a20-c97015e185f6")
-		)
-		(instances
-			(project ""
-				(path "/8f3f2cb0-c7c7-4116-9663-55f4dfa53e17"
-					(reference "K1")
 					(unit 1)
 				)
 			)
@@ -8381,6 +8557,81 @@
 			(project ""
 				(path "/8f3f2cb0-c7c7-4116-9663-55f4dfa53e17"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Relay:Relay_SPST-NO")
+		(at 175.26 69.85 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "de2850ff-6a33-482b-8b43-abdf7658b79e")
+		(property "Reference" "K2"
+			(at 175.26 54.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Relay_SPST-NO"
+			(at 175.26 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_SPST_Panasonic_JW1_FormA"
+			(at 173.99 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 175.26 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Relay SPST, normally open, EN50005"
+			(at 175.26 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "95faa0f2-8b37-4368-bc11-97b78b2aa295")
+		)
+		(pin "1"
+			(uuid "cf75baf9-62f6-49d1-8ecd-2541354c713d")
+		)
+		(pin "8"
+			(uuid "6ce6d711-ed09-4c98-b17a-7961725c7d6a")
+		)
+		(pin "6"
+			(uuid "326c72e7-71cc-4529-993c-b39f5d81d6eb")
+		)
+		(instances
+			(project "Garaż"
+				(path "/8f3f2cb0-c7c7-4116-9663-55f4dfa53e17"
+					(reference "K2")
 					(unit 1)
 				)
 			)
@@ -8895,7 +9146,7 @@
 	)
 	(symbol
 		(lib_id "power:+6V")
-		(at 167.64 72.39 90)
+		(at 167.64 74.93 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8903,7 +9154,7 @@
 		(dnp no)
 		(uuid "f66130c2-1d5a-48a6-b864-45b683498d9f")
 		(property "Reference" "#PWR011"
-			(at 171.45 72.39 0)
+			(at 171.45 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8912,7 +9163,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 163.83 72.3899 90)
+			(at 163.83 74.9299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8921,7 +9172,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 72.39 0)
+			(at 167.64 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8930,7 +9181,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 72.39 0)
+			(at 167.64 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8939,7 +9190,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+6V\""
-			(at 167.64 72.39 0)
+			(at 167.64 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8961,7 +9212,7 @@
 	)
 	(symbol
 		(lib_id "power:+6V")
-		(at 135.89 72.39 90)
+		(at 135.89 74.93 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8969,7 +9220,7 @@
 		(dnp no)
 		(uuid "f6b6643e-9ccd-4db5-b1ca-ab14bc5ac4f3")
 		(property "Reference" "#PWR06"
-			(at 139.7 72.39 0)
+			(at 139.7 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8978,7 +9229,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 132.08 72.3899 90)
+			(at 132.08 74.9299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8987,7 +9238,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 72.39 0)
+			(at 135.89 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8996,7 +9247,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 72.39 0)
+			(at 135.89 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9005,7 +9256,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+6V\""
-			(at 135.89 72.39 0)
+			(at 135.89 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)

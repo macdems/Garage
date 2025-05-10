@@ -1985,6 +1985,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Params" "GAIN=140k"
+			(at 147.32 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "5"
 			(uuid "2c709c73-f4d2-495b-ac1d-ca3ee2d25055")
 		)
@@ -2093,7 +2102,7 @@
 				)
 			)
 		)
-		(property "Value" "6k8"
+		(property "Value" "10k"
 			(at 123.19 86.36 90)
 			(effects
 				(font
@@ -2315,7 +2324,7 @@
 				)
 			)
 		)
-		(property "Value" "6k8"
+		(property "Value" "10k"
 			(at 129.54 109.22 90)
 			(effects
 				(font
@@ -2467,7 +2476,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "51k"
+		(property "Value" "68k"
 			(at 133.35 96.5199 0)
 			(effects
 				(font
@@ -3283,7 +3292,7 @@
 				)
 			)
 		)
-		(property "Value" "51k"
+		(property "Value" "68k"
 			(at 146.05 109.22 90)
 			(effects
 				(font

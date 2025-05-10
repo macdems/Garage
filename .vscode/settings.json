@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.xpl": "plask",
+        "*.wsgi": "python",
+        "*.inc": "cpp"
+    }
+}

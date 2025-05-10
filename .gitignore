@@ -1,1 +1,3 @@
-/JLCPCB
+/JLCPCB/
+/.esphome/
+/secrets.yaml
