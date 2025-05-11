@@ -55,16 +55,21 @@ sensor:
           send_first_at: 2
 
 binary_sensor:
+  # - platform: gpio
+  #   name: Przycisk
+  #   entity_category: diagnostic
+  #   pin:
+  #     number: 10
+  #     mode: INPUT_PULLUP
+  #     inverted: true
+  #   id: push_button
+  #   on_click:
+  #     min_length: 200ms
+  #     then:
+  #       cover.toggle: garage_door
   - platform: gpio
-    pin:
-      number: 10
-      mode: INPUT_PULLUP
-      inverted: true
-    id: push_button
-    on_press:
-      then:
-        cover.toggle: garage_door
-  - platform: gpio
+    name: Pilot/przycisk
+    entity_category: diagnostic
     pin:
       number: 7
       mode: INPUT_PULLUP
