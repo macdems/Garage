@@ -32,6 +32,16 @@ wifi:
 
 captive_portal:
 
+globals:
+  - id: disable_button
+    type: bool
+    restore_value: true
+    initial_value: "false"
+  - id: disable_remote
+    type: bool
+    restore_value: true
+    initial_value: "false"
+
 sensor:
   - platform: wifi_signal
     name: RSSI
@@ -55,29 +65,41 @@ sensor:
           send_first_at: 2
 
 binary_sensor:
-  # - platform: gpio
-  #   name: Przycisk
-  #   entity_category: diagnostic
-  #   pin:
-  #     number: 10
-  #     mode: INPUT_PULLUP
-  #     inverted: true
-  #   id: push_button
-  #   on_click:
-  #     min_length: 200ms
-  #     then:
-  #       cover.toggle: garage_door
   - platform: gpio
-    name: Pilot/przycisk
+    name: Przycisk
+    entity_category: diagnostic
+    pin:
+      number: 10
+      mode: INPUT_PULLUP
+      inverted: true
+    id: push_button
+    filters:
+      - delayed_on_off: 100ms
+    on_press:
+      then:
+        if:
+          condition:
+            lambda: 'return !id(disable_button);'
+          then:
+            - cover.toggle: garage_door
+
+  - platform: gpio
+    name: Pilot
     entity_category: diagnostic
     pin:
       number: 7
       mode: INPUT_PULLUP
       inverted: true
     id: radio_button
+    filters:
+      - delayed_on_off: 200ms
     on_press:
       then:
-        cover.toggle: garage_door
+        if:
+          condition:
+            lambda: 'return !id(disable_remote);'
+          then:
+            - cover.toggle: garage_door
 
 switch:
   - platform: gpio
@@ -93,6 +115,34 @@ switch:
     restore_mode: ALWAYS_OFF
     interlock: *interlock
     interlock_wait_time: 0.5s
+
+  - platform: template
+    name: Blokada przycisku
+    entity_category: config
+    icon: mdi:circle-off-outline
+    lambda: return id(disable_button);
+    turn_on_action:
+      - globals.set:
+          id: disable_button
+          value: "true"
+    turn_off_action:
+      - globals.set:
+          id: disable_button
+          value: "false"
+
+  - platform: template
+    name: Blokada pilota
+    entity_category: config
+    icon: mdi:circle-off-outline
+    lambda: return id(disable_remote);
+    turn_on_action:
+      - globals.set:
+          id: disable_remote
+          value: "true"
+    turn_off_action:
+      - globals.set:
+          id: disable_remote
+          value: "false"
 
 cover:
   - platform: current_based
