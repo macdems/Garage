@@ -2,6 +2,10 @@
 esphome:
   name: garaz
   friendly_name: Brama garazowa
+  # on_boot:
+  #   priority: -200
+  #   then:
+  #     - cover.close: garage_door
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -123,6 +127,7 @@ switch:
     entity_category: config
     icon: mdi:lock
     lambda: return id(disable_button);
+    restore_mode: RESTORE_DEFAULT_OFF
     turn_on_action:
       - globals.set:
           id: disable_button
@@ -137,6 +142,7 @@ switch:
     entity_category: config
     icon: mdi:lock
     lambda: return id(disable_remote);
+    restore_mode: RESTORE_DEFAULT_OFF
     turn_on_action:
       - globals.set:
           id: disable_remote
