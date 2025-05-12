@@ -68,6 +68,7 @@ binary_sensor:
   - platform: gpio
     name: Przycisk
     entity_category: diagnostic
+    icon: mdi:electric-switch
     pin:
       number: 10
       mode: INPUT_PULLUP
@@ -86,6 +87,7 @@ binary_sensor:
   - platform: gpio
     name: Pilot
     entity_category: diagnostic
+    icon: mdi:electric-switch
     pin:
       number: 7
       mode: INPUT_PULLUP
@@ -119,7 +121,7 @@ switch:
   - platform: template
     name: Blokada przycisku
     entity_category: config
-    icon: mdi:circle-off-outline
+    icon: mdi:lock
     lambda: return id(disable_button);
     turn_on_action:
       - globals.set:
@@ -133,7 +135,7 @@ switch:
   - platform: template
     name: Blokada pilota
     entity_category: config
-    icon: mdi:circle-off-outline
+    icon: mdi:lock
     lambda: return id(disable_remote);
     turn_on_action:
       - globals.set:
