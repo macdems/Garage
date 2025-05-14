@@ -98,7 +98,7 @@ binary_sensor:
       inverted: true
     id: radio_button
     filters:
-      - delayed_on_off: 200ms
+      - delayed_on_off: 50ms
     on_press:
       then:
         if:
