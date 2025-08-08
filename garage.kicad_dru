@@ -1,0 +1,5 @@
+(version 1)
+(rule current_sensor
+  (condition "A.NetClass == B.NetClass && A.NetClass == 'AC*'")
+  (constraint clearance (min 0.2mm))
+)

@@ -463,7 +463,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Garage.kicad_pro",
+    "filename": "garage.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -488,9 +488,25 @@
       },
       {
         "clearance": 2.5,
-        "name": "AC",
+        "name": "AC/G",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.6
+      },
+      {
+        "clearance": 2.5,
+        "name": "AC/L",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.6
+      },
+      {
+        "clearance": 2.5,
+        "name": "AC/N",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.6
       },
@@ -498,7 +514,7 @@
         "clearance": 0.2,
         "name": "Relay control",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.8,
         "via_diameter": 0.8,
@@ -508,7 +524,7 @@
         "clearance": 0.4,
         "name": "VCC",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.8,
         "via_diameter": 0.8,
@@ -522,16 +538,24 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "AC",
-        "pattern": "AC{slash}.*"
-      },
-      {
         "netclass": "VCC",
         "pattern": "\\+\\d+V"
       },
       {
         "netclass": "Relay control",
         "pattern": "Net-\\(Q\\d-C\\)"
+      },
+      {
+        "netclass": "AC/L",
+        "pattern": "/?AC{slash}L.*"
+      },
+      {
+        "netclass": "AC/N",
+        "pattern": "/?AC{slash}N.*"
+      },
+      {
+        "netclass": "AC/G",
+        "pattern": "AC{slash}G.*"
       }
     ]
   },
